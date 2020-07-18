@@ -1,1 +1,1 @@
-import .get_definition
+import get_definition
