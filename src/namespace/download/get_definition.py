@@ -8,9 +8,8 @@ def get_word(word: str) -> list:
     )
     json_response = r.json()[0]
     word = json_response["meta"]["id"]
-    offensive = json_response["meta"]["offensive"]
     definitions = json_response["shortdef"]
-    word_info = {"word": word, "offensive": offensive, "definitions": definitions}
+    word_info = {"word": word, "definitions": definitions}
     return word_info
 
 
@@ -18,7 +17,6 @@ if __name__ == "__main__":
     w = input("What word would you like to request? ")
     w_inf = get_word(w)
     formatted_inf = """Word: {word}
-Is Offensive: {offensive}
 Definitions: \n{definitions}""".format(
         word=w_inf["word"],
         offensive=w_inf["offensive"],
