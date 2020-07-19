@@ -17,7 +17,6 @@ while program_running:
         newline = "\n"
         formatted_inf = (
             f"{colorit.color('Word', colorit.Colors.blue)}: {w_inf['word']}{newline}"
-            f"{colorit.color('Is Offensive', colorit.Colors.blue)}: {w_inf['offensive']}{newline}"
             f"{colorit.color('Definitions', colorit.Colors.blue)}"
             f"{''.join([f'{newline}   {i+1}: {definition}' for i, definition in enumerate(w_inf['definitions'])])}"
         )
