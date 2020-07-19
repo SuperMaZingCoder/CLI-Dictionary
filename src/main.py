@@ -19,7 +19,8 @@ while program_running:
             formatted_res = (
                 f"{colorit.color('Word', colorit.Colors.blue)}: {w_inf['word']}{newline}"
                 f"{colorit.color('Definitions', colorit.Colors.blue)}"
-                f"{''.join([f'{newline}   {i+1}: {definition}' for i, definition in enumerate(w_inf['definitions'])])}"
+                f"{''.join([f'{newline}   {i+1}: {definition}' for i, definition in enumerate(w_inf['definitions'])])}{newline}"
+                "Find more definitions at {}".format(colorit.color(f'https://www.merriam-webster.com/dictionary/{w_inf["word"]}', colorit.Colors.purple))
             )
         elif w_inf["return_type"] == "options":
             if len(w_inf["options"]) > 0:
