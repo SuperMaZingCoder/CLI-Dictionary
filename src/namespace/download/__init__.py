@@ -1,1 +1,1 @@
-import get_definition
+from . import get_definition
